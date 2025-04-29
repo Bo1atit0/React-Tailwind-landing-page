@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme{
+  --color-p1: blue;
+}
