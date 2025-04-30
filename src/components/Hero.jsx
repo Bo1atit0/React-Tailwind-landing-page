@@ -1,4 +1,5 @@
 import React from 'react'
+import heroImage from '../assets/hero-image.png'
 
 const Hero = () => {
   return (
@@ -32,7 +33,14 @@ const Hero = () => {
 
 
       {/* right column */}
-      <div className='border-4'>right</div>
+      <div className='w-full md:w-1/2 md:pl-12 md:mt-0 mt-16'>
+        <div className=''>
+          <img 
+            src={heroImage} 
+            alt="hero image"
+            className='  hover:scale-[1.02] transition-transform duration-500 ' />
+        </div>
+      </div>
     </section>
   )
 }
