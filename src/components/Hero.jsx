@@ -9,7 +9,7 @@ const Hero = () => {
 
         {/* star icon */}
         <div className='cursor-pointer group bg-gray-100 w-fit rounded-full px-4 py-2 flex items-center gap-2 hover:bg-gray-200 transition-colors'>
-          <span className='text-blue-700 group-hover:scale-120 group-hover:text-amber-400 transition-transform'>★</span>
+          <span className='text-blue-700  group-hover:scale-120 group-hover:text-amber-400 transition-transform'>★</span>
           <span className=' text-sm mt-0.5 font-medium'>Jump start your growth</span>
         </div>
 
