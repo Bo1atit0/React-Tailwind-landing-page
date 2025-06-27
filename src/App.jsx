@@ -1,8 +1,8 @@
-
+import './App.css'
 import Navbar from './components/navbar'
 import Hero from './components/Hero'
-import Accordion from './components/Accordion'
-import Content from './components/content'
+import CompanyLogo from './components/CompanyLogo'
+import PurposeSection from './components/PurposeSection'
 
 function App() {
 
@@ -13,6 +13,8 @@ function App() {
         <div className='overflow-x-hidden'>
           <Navbar />
           <Hero />
+          <CompanyLogo />
+          <PurposeSection />
         </div>
       </main>   
       
