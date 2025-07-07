@@ -16,29 +16,29 @@ const PurposeSection = () => {
   ];
 
   return (
-    <section className=' bg-gray-100 py-16 w-full px-4 sm:px-6 md:px-8'>
+    <section className=' bg-gray-100 py-16 w-full px-8 md:px-20 '>
       
-      <div className='flex flex-col gap-6 md:flex-row lg:flex-row mx-auto max-w-6xl container'>
-
-        {/* header */}
-        <div className='flex-1'>
-          <h3 className='font-bold text-purple-600 text-xs '>ACHIEVE MORE</h3>
-          <h2 className='font-extrabold text-xl text-gray-900 '>Purpose of a <br/> convoy is to keep <br/> your team</h2>
+      <div className=' container mx-auto max-w-4xl flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-8'>
+        <div className=' '>
+          {/* header */}
+            <p className='font-medium text-purple-600 text-sm mb-1'>ACHIEVE MORE</p>
+            <h2 className='font-bold text-2xl md:text-3xl text-gray-900'>Purpose of a <br/> convoy is to keep <br/> your team</h2>
         </div>
 
-        {/* BulletPoint */}
-        <div className='flex-3 flex flex-col gap-4 md:flex-row lg:flex-row'>
-          {features.map((feature, index) => (
-            <div className='flex gap-2  items-start'>
-              <div className='rounded-lg '>{feature.icon}</div>
-              <div className='flex flex-col gap-2'>
-                <h4 className='font-bold'>{feature.title}</h4>
-                <p className='text-sm text-gray-600'>{feature.description}</p>
+
+          {/* BulletPoint */}
+          <div className=' flex flex-col gap-4 md:flex-row lg:flex-row flex-2'>
+            {features.map((feature, index) => (
+              <div key={index} className='flex gap-1 md:gap-2 lg:gap-2 items-start flex-2'>
+                <div className=' h-12 w-12 flex items-end'>{feature.icon}</div>
+                <div className='flex flex-col gap-1'>
+                  <h4 className='font-bold text-xl text-gray-900'>{feature.title}</h4>
+                  <p className=' text-gray-600 text-sm'>{feature.description}</p>
+                </div>
               </div>
-            </div>
-            ))}
+              ))}
+          </div>
         </div>
-      </div>
       
     </section>
   )

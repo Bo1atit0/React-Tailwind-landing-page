@@ -54,44 +54,44 @@ const navbar = () => {
       </div>
 
       {/* mobile menu items */}
-    {
-      isOpen && (
-        <div className='md:hidden bg-white border-t border-gray-300 py-4 space-y-4'>
+      {
+        isOpen && (
+          <div className='md:hidden bg-white border-t border-gray-300 py-4 space-y-4'>
 
-          <div className='px-4 container space-y-4 mx-auto'>
-            {
-             navLinks.map((links, index) => (
-                <div>
-                  <a
-                    key={index}
-                    onClick={() => { 
-                    setActiveLinks(links.href)
-                    setIsOpen(false)
-                    }}
-                    href={links.href}
-                    className={` text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:bg-blue-500 after:h-0.5 after:transition-all
-                      ${activeLinks === links.href ? 'text-blue-500 after:w-full' : 'text-gray-400'}`}>
-                        {links.label}
-                  </a>
-                </div>
-              ))
-            }
+            <div className='px-4 container space-y-4 mx-auto'>
+              {
+              navLinks.map((links, index) => (
+                  <div>
+                    <a
+                      key={index}
+                      onClick={() => { 
+                      setActiveLinks(links.href)
+                      setIsOpen(false)
+                      }}
+                      href={links.href}
+                      className={` text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:bg-blue-500 after:h-0.5 after:transition-all
+                        ${activeLinks === links.href ? 'text-blue-500 after:w-full' : 'text-gray-400'}`}>
+                          {links.label}
+                    </a>
+                  </div>
+                ))
+              }
 
-            {/* Button */}
-            <div>
-              <button className='md:hidden text-sm font-medium 
-             bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer
-              hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100 
-              w-full'> 
-             Get in touch </button>
+              {/* Button */}
+              <div>
+                <button className='md:hidden text-sm font-medium 
+              bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer
+                hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100 
+                w-full'> 
+              Get in touch </button>
+            </div>
+            </div>
+
+            
+
           </div>
-          </div>
-
-          
-
-        </div>
-      )
-    }
+        )
+      }
     </nav>
 
     
