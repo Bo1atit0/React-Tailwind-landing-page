@@ -1,4 +1,5 @@
 import React from 'react'
+import { Element } from 'react-scroll';
 
 const PurposeSection = () => {
 
@@ -16,14 +17,15 @@ const PurposeSection = () => {
   ];
 
   return (
-    <section className=' bg-gray-100 py-16 w-full px-8 md:px-20 '>
-      
-      <div className=' container mx-auto max-w-4xl flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-8'>
-        <div className=' '>
-          {/* header */}
+    <Element name='about'>
+      <section className=' bg-gray-100 py-16 w-full px-8 md:px-20 '>
+
+        <div className=' container mx-auto max-w-5xl flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-8'>
+          <div className=' '>
+            {/* header */}
             <p className='font-medium text-purple-600 text-sm mb-1'>ACHIEVE MORE</p>
-            <h2 className='font-bold text-2xl md:text-3xl text-gray-900'>Purpose of a <br/> convoy is to keep <br/> your team</h2>
-        </div>
+            <h2 className='font-bold text-2xl md:text-3xl text-gray-900'>Purpose of a <br /> convoy is to keep <br /> your team</h2>
+          </div>
 
 
           {/* BulletPoint */}
@@ -36,11 +38,12 @@ const PurposeSection = () => {
                   <p className=' text-gray-600 text-sm'>{feature.description}</p>
                 </div>
               </div>
-              ))}
+            ))}
           </div>
         </div>
-      
-    </section>
+
+      </section>
+    </Element>
   )
 }
 

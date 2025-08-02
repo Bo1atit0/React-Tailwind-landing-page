@@ -1,9 +1,12 @@
 import React from 'react'
 import heroImage from '../assets/hero-image.png'
+import { Element } from 'react-scroll'
+
 
 const Hero = () => {
   return (
-    <section className='pt-44 mx-auto pb-6 px-4 sm:px-6 lg:px-8 container flex flex-col md:flex-row justify-between items-center'>
+    <Element name='home'>
+    <section className='pt-44 mx-auto pb-6 px-4 sm:px-6 lg:px-8 container max-w-5xl flex flex-col md:flex-row justify-between items-center'>
       {/* left column */}
       <div className=' w-full md:w-1/2 space-y-8'>
 
@@ -42,6 +45,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </Element>
   )
 }
 

@@ -1,24 +1,25 @@
 import React, { useState } from 'react'
 import { MdClose } from "react-icons/md";
 import { CiMenuBurger } from "react-icons/ci";
+import {Link} from 'react-scroll'
 
 const navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
-  const [activeLinks, setActiveLinks] = useState('#home')
+  const [activeLinks, setActiveLinks] = useState('home')
   const navLinks = [
-    { href: "#home", label: 'Home'},
-    { href: "#about", label: 'About us'},
-    { href: "#services", label: 'Our Services'},
-    { href: "#testimonials", label: 'Testimonial'},
+    { href: "home", label: 'Home'},
+    { href: "about", label: 'About us'},
+    { href: "services", label: 'Our Services'},
+    { href: "testimonials", label: 'Testimonial'},
   ]
 
   return (
     <>
 
     <nav className='fixed top-0 left-0 bg-white/90 border-b right-0 border-gray-200 backdrop-blur-sm z-50  shadow-md'>
-      <div className='flex items-center justify-between w-full mx-auto container h-16 px-4 md:h-20 sm:px-6 lg:px-8'>
+      <div className='flex items-center justify-between h-16 px-4 md:h-20 md:px-8 lg:px-8 max-w-5xl container mx-auto '>
 
         {/* Logo */}
         <div className='flex '>
@@ -27,17 +28,21 @@ const navbar = () => {
         </div>
 
         {/* Desktop Nav items */}
-        <div className='hidden md:flex items-center gap-10'>
+        <div className='hidden md:flex items-center gap-10 cursor-pointer'>
           {
             navLinks.map((links, index) => (
-              <a 
+              <Link
+              smooth={true}
+              offset={-70}
+              duration={2000}
               onClick={ () => { setActiveLinks(links.href)}}
               key={index} 
-              href={links.href}
+              to={links.href}
               className={`text-sm font-medium relative after:absolute after:bottom-0 after:left-0 
               after:w-0 hover:after:w-full after:h-0.5 after:bg-blue-500 after:transition-all 
-              ${activeLinks === links.href ? 'text-blue-500 after:w-full' : 'text-gray-600 hover:text-gray-900' }`}>
-                {links.label}</a>
+              ${activeLinks === links.href ? 'after:w-full' : 'text-neutral-700'}
+              }`}>
+                {links.label}</Link>
             ))
           }
         </div>
@@ -58,21 +63,24 @@ const navbar = () => {
         isOpen && (
           <div className='md:hidden bg-white border-t border-gray-300 py-4 space-y-4'>
 
-            <div className='px-4 container space-y-4 mx-auto'>
+            <div className='px-4 container space-y-4 mx-auto cursor-pointer'>
               {
               navLinks.map((links, index) => (
                   <div>
-                    <a
+                    <Link
+                      smooth={true}
+                      offset={-70}
+                      duration={2000}
                       key={index}
                       onClick={() => { 
                       setActiveLinks(links.href)
                       setIsOpen(false)
                       }}
-                      href={links.href}
+                      to={links.href}
                       className={` text-sm font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:bg-blue-500 after:h-0.5 after:transition-all
                         ${activeLinks === links.href ? 'text-blue-500 after:w-full' : 'text-gray-400'}`}>
                           {links.label}
-                    </a>
+                    </Link>
                   </div>
                 ))
               }

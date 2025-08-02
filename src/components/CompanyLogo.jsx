@@ -9,7 +9,7 @@ const CompanyLogo = () => {
 
   const logos = [slack, amazon, meundies, sitepoint, woocommerce];
   return (
-    <section className='overflow-hidden  container w-full py-20  sm:px-6 px-4 mx-auto flex sm:flex-row sm:items-center flex-col items-start gap-8'>
+    <section className='overflow-hidden  container max-w-5xl py-20  sm:px-6 px-4 mx-auto flex sm:flex-row sm:items-center flex-col items-start gap-8'>
       <div className=' border-l-4 border-blue-500 px-4 font-semibold shrink-0 sm:text-base text-xl text-gray-500 text-left z-10'>
         Proud partner at <br /> Hubspot & Segment
       </div>
