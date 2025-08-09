@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { MdClose } from "react-icons/md";
 import { CiMenuBurger } from "react-icons/ci";
 import {Link} from 'react-scroll'
+import Button from './Button';
 
 const navbar = () => {
 
@@ -48,8 +49,9 @@ const navbar = () => {
         </div>
 
         {/* Button */}
-        <div>
-          <button className='hidden md:block text-sm font-medium  bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100'> Get in touch </button>
+        <div className='hidden md:block'>
+          {/* <button className='hidden md:block text-sm font-medium  bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100'> Get in touch </button> */}
+          <Button>Get in touch</Button>
         </div>
 
         {/* Mobile menu */}

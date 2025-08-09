@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Button from './Button'
 
 const PricingSection = () => {
 
@@ -59,13 +60,13 @@ const PricingSection = () => {
         <h1 className='text-center text-3xl font-bold'>Pricing</h1>
       </div>
 
-      <div className='flex items-center gap-8'>
-        <div className='bg-white shadow-lg p-4 flex-1'>
+      <div className='flex flex-col md:flex-row items-center gap-8'>
+        <div className='bg-white shadow-lg p-4 md:flex-1 w-full'>
           <h2 className='text-gray-400 font-semibold mb-4'>Starter</h2>
           <p className='font-bold text-2xl '>${starterPrice}/mo</p>
         </div>
 
-        <div className='bg-white shadow-lg p-4 flex-1'>
+        <div className='bg-white shadow-lg p-4 w-full md:flex-1'>
           <h2 className='text-gray-400 font-semibold mb-4'>Business</h2>
           <p className='font-bold text-2xl '>${businessPrice}/mo</p>
         </div>
@@ -82,7 +83,7 @@ const PricingSection = () => {
                  value={productCount} 
                  onChange={(e) => setProductCount(e.target.value)}
                  min={1} max={50}
-                 className={`w-full lg:w-1/3 md:w-1/3 h-2 rounded-lg appearance-none bg-gray-300 cursor-pointer mx-2`}
+                 className={`w-70 lg:w-1/3 md:w-1/3 h-2 rounded-lg appearance-none bg-gray-300 cursor-pointer mx-2`}
                  style={{
                   background: sliderColor(productCount)
                  }}/>      
@@ -93,7 +94,7 @@ const PricingSection = () => {
 
       <div className='flex flex-col gap-4 items-center'>
         <p className='text-gray-400 '>Ready to get started?</p>
-        <button className='bg-blue-500 text-sm font-semibold text-white py-3 px-6 rounded-lg cursor-pointer hover:bg-blue-700 transition-colors duration-300 ease-in-out'>Get Started</button>
+        <Button>Get Started</Button>
       </div>
     </section>
   )

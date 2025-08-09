@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 const MonitorSection = () => {
   return (
     <section className='  px-4'>
-      <div className='flex flex-col md:flex-row lg:flex-row items-center justify-between gap-12 max-w-5xl mx-auto'>
+      <div className='flex flex-col md:flex-row lg:flex-row items-center justify-between max-w-5xl gap-4 mx-auto'>
 
         <div className='flex flex-col gap-4 w-full md:w-1/2 lg:w-1/2 px-12'>
           <p className='font-bold text-green-600'>MONITOR</p>

@@ -10,6 +10,7 @@ import { Element } from 'react-scroll';
 import PricingSection from './components/PricingSection'
 import Boxref from './components/Boxref'
 import ServicesSection from './components/ServicesSection'
+import TestimonialSection from './components/TestimonialSection'
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
           <MonitorSection/>
           <PricingSection />
           <ServicesSection/>
+          <TestimonialSection/>
         </div>
       </main>   
       
