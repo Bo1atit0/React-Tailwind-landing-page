@@ -11,6 +11,8 @@ import PricingSection from './components/PricingSection'
 import Boxref from './components/Boxref'
 import ServicesSection from './components/ServicesSection'
 import TestimonialSection from './components/TestimonialSection'
+import NewsLetterSection from './components/NewsLetterSection'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -32,6 +34,8 @@ function App() {
           <PricingSection />
           <ServicesSection/>
           <TestimonialSection/>
+          <NewsLetterSection />
+          <Footer/>
         </div>
       </main>   
       

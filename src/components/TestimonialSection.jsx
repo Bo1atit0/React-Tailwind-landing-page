@@ -4,33 +4,30 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import { Element } from 'react-scroll';
 
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 const TestimonialSection = () => {
   return (
-    <section className='mx-w-5xl mx-auto mt-12 px-8 md:px-4'>
+    <Element name='testimonials'>
+    <section className='mx-w-5xl mx-auto mt-12 px-8 md:px-4' >
       {/* header */}
       <div className='text-center mb-14'>
-        <h2 className='font-bold text-2xl md:text-3xl '>What Our happy clients say</h2>
+        <h2 className='font-bold text-2xl md:text-3xl mb-2'>What Our happy clients say</h2>
         <p className='text-neutral-600 text-sm mb-6'>Things that make it the best place to start trading</p>
       </div>
-
+       
       {/* testimonials */}
       <div >
         {/* slider */}
         <div className='relative flex justify-center items-center  container mx-auto'>
           <Swiper
             spaceBetween={30}
-            // pagination={{
-            //   clickable: true,
-            // }}
-            // loop={true}
-            // navigation={true}
 
             breakpoints={{
               0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
+              700: { slidesPerView: 2 },
               1024: { slidesPerView: 3},
             }}
             // loop = {true}
@@ -75,6 +72,7 @@ const TestimonialSection = () => {
         </div>
       </div>
     </section>
+    </Element>
   )
 }
 

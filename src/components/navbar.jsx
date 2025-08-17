@@ -34,8 +34,8 @@ const navbar = () => {
             navLinks.map((links, index) => (
               <Link
               smooth={true}
-              offset={-70}
-              duration={2000}
+              offset={-75}
+              duration={1500}
               onClick={ () => { setActiveLinks(links.href)}}
               key={index} 
               to={links.href}
@@ -51,7 +51,10 @@ const navbar = () => {
         {/* Button */}
         <div className='hidden md:block'>
           {/* <button className='hidden md:block text-sm font-medium  bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100'> Get in touch </button> */}
-          <Button>Get in touch</Button>
+          <Link 
+            smooth={true}
+            duration={1500}
+            to='newsletter'><Button>Get in touch</Button></Link>
         </div>
 
         {/* Mobile menu */}
@@ -89,11 +92,11 @@ const navbar = () => {
 
               {/* Button */}
               <div>
-                <button className='md:hidden text-sm font-medium 
+                <a href='#newsletter'><button className='md:hidden text-sm font-medium 
               bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer
                 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100 
                 w-full'> 
-              Get in touch </button>
+              Get in touch </button></a>
             </div>
             </div>
 

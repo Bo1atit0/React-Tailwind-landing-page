@@ -29,15 +29,15 @@ const ServicesSection = () => {
             </div>
 
           </div>
-          <div>
+          <div className='flex justify-center md:justify-start'>
             < Button >Get Started</Button>
             {/* <button className=''>Get Started</button> */}
           </div>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
           {services.map((service, index) => (
-            <div className="bg-white shadow-lg rounded-lg shadow-neutral-300  md:max-w-60 py-4 px-3 
+            <div className="bg-white shadow-lg rounded-lg shadow-neutral-300  md:max-w-60 lg:max-w-60 py-4 px-3 
                               cursor-pointer hover:scale-105 transition-all duration-500 ease-in-out active:scale-95 hover:shadow-xl">
               <div className='mb-4'>{service.icon}</div>
               <h3 className="font-semibold mb-2">{service.title}</h3>
