@@ -1,5 +1,7 @@
-import React from 'react'
+
 import { Element } from 'react-scroll';
+import { motion } from 'framer-motion';
+import { fadeLeft } from './utils/motion';
 
 const PurposeSection = () => {
 
@@ -18,8 +20,13 @@ const PurposeSection = () => {
 
   return (
     <Element name='about'>
-      <section className=' bg-gray-100 py-16 w-full px-8 md:px-20 '>
-
+      <motion.section
+      variants={ fadeLeft }
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: 'true', amount:'0.05'}}
+      className=' bg-gray-100 py-16 w-full px-8 md:px-20 '>
+      
         <div className=' container mx-auto max-w-5xl flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-8'>
           <div className=' '>
             {/* header */}
@@ -42,7 +49,7 @@ const PurposeSection = () => {
           </div>
         </div>
 
-      </section>
+      </motion.section>
     </Element>
   )
 }

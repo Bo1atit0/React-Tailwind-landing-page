@@ -1,6 +1,8 @@
 import React from 'react'
 import heroImage from '../assets/hero-image.png'
 import { Element } from 'react-scroll'
+import { motion } from 'framer-motion'
+import { fadeLeft, fadeRight } from './utils/motion'
 
 
 const Hero = () => {
@@ -8,7 +10,12 @@ const Hero = () => {
     <Element name='home'>
     <section className='pt-44 mx-auto pb-6 px-4 sm:px-6 lg:px-8 container max-w-5xl flex flex-col md:flex-row justify-between items-center'>
       {/* left column */}
-      <div className=' w-full md:w-1/2 space-y-8'>
+      <motion.div
+      variants={fadeRight}
+      initial='hidden'
+      animate='show'
+      
+      className=' w-full md:w-1/2 space-y-8'>
 
         {/* star icon */}
         <div className='cursor-pointer group bg-gray-100 w-fit rounded-full px-4 py-2 flex items-center gap-2 hover:bg-gray-200 transition-colors'>
@@ -32,18 +39,22 @@ const Hero = () => {
 
           <button className='bg-blue-500 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100 hover:cursor-pointer py-2 px-5 text-white rounded-lg font-medium text-sm '>→</button>
         </div>
-      </div>
+      </motion.div>
 
 
       {/* right column */}
-      <div className='w-full md:w-1/2 md:pl-12 md:mt-0 mt-16'>
+      <motion.div 
+      variants={ fadeLeft}
+      initial= 'hidden'
+      animate='show'
+      className='w-full md:w-1/2 md:pl-12 md:mt-0 mt-16'>
         <div className=''>
           <img 
             src={heroImage} 
             alt="hero image"
             className='  hover:scale-[1.02] transition-transform duration-500 ' />
         </div>
-      </div>
+      </motion.div>
     </section>
     </Element>
   )

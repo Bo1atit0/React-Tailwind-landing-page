@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl container mx-auto px-6 md:px-8 lg:px-8">
         {/* first row */}
         <div className=" space-y-5 col-span-1" >
 
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* second row */}
-        <div className="grid grid-cols-4 gap-8 col-span-2 pb-8">
+        <div className="grid md:grid-cols-4 lg:grid-cols-4 gap-8 col-span-2 pb-8">
           {
             Object.entries(footerLinks).map(([category, links], categoryIndex) => (
               <div key={categoryIndex} >
@@ -60,8 +60,8 @@ const Footer = () => {
 
       </div>
       {/* footer bottom section */}
-        <div className="container mx-auto  border-t border-gray-200">
-          <div className=" flex flex-col md:flex-row justify-between">
+        <div className="container mx-auto  border-t border-gray-200 px-6">
+          <div className=" flex flex-col md:flex-row justify-between space-y-2">
             <p className="text-sm text-gray-600">Copyright © {new Date().getFullYear()} bo1atit0</p>
             <p className="text-sm text-gray-600">Created by bo1atit0</p>
           </div>

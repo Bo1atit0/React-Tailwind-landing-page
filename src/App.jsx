@@ -6,9 +6,7 @@ import PurposeSection from './components/PurposeSection'
 import FeaturesSection from './components/FeaturesSection'
 import Schedule from './components/Schedule'
 import MonitorSection from './components/MonitorSection'
-import { Element } from 'react-scroll';
 import PricingSection from './components/PricingSection'
-import Boxref from './components/Boxref'
 import ServicesSection from './components/ServicesSection'
 import TestimonialSection from './components/TestimonialSection'
 import NewsLetterSection from './components/NewsLetterSection'
@@ -24,8 +22,6 @@ function App() {
 
           <Navbar />
           <Hero />
-          
-          
           <CompanyLogo />
           <PurposeSection />
           <FeaturesSection />

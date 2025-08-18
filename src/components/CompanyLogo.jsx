@@ -4,12 +4,19 @@ import amazon from '../assets/amazon.png'
 import meundies from '../assets/meundies.png'
 import sitepoint from '../assets/sitepoint.png'
 import woocommerce from '../assets/woocommerce.png'
+import { motion } from 'framer-motion'
+import { fadeRight } from './utils/motion'
 
 const CompanyLogo = () => {
 
   const logos = [slack, amazon, meundies, sitepoint, woocommerce];
   return (
-    <section className='overflow-hidden  container max-w-5xl py-20  sm:px-6 px-4 mx-auto flex sm:flex-row sm:items-center flex-col items-start gap-8'>
+    <motion.section
+    variants={ fadeRight }
+    initial='hidden'
+    whileInView='show'
+    viewport={{ once: true, amount: 0.05}}
+    className='overflow-hidden  container max-w-5xl py-20  sm:px-6 px-4 mx-auto flex sm:flex-row sm:items-center flex-col items-start gap-8'>
       <div className=' border-l-4 border-blue-500 px-4 font-semibold shrink-0 sm:text-base text-xl text-gray-500 text-left z-10'>
         Proud partner at <br /> Hubspot & Segment
       </div>
@@ -26,7 +33,7 @@ const CompanyLogo = () => {
         ))}        
       </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

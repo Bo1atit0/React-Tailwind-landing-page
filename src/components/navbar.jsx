@@ -3,6 +3,8 @@ import { MdClose } from "react-icons/md";
 import { CiMenuBurger } from "react-icons/ci";
 import {Link} from 'react-scroll'
 import Button from './Button';
+import { motion } from 'framer-motion'
+import { fadeDown } from './utils/motion'
 
 const navbar = () => {
 
@@ -19,7 +21,12 @@ const navbar = () => {
   return (
     <>
 
-    <nav className='fixed top-0 left-0 bg-white/90 border-b right-0 border-gray-200 backdrop-blur-sm z-50  shadow-md'>
+    <motion.nav
+    variants={ fadeDown }
+    initial='hidden'
+    animate='show'
+    transition={{ duration: 1}}
+    className='fixed top-0 left-0 bg-white/90 border-b right-0 border-gray-200 backdrop-blur-sm z-50  shadow-md'>
       <div className='flex items-center justify-between h-16 px-4 md:h-20 md:px-8 lg:px-8 max-w-5xl container mx-auto '>
 
         {/* Logo */}
@@ -92,11 +99,15 @@ const navbar = () => {
 
               {/* Button */}
               <div>
-                <a href='#newsletter'><button className='md:hidden text-sm font-medium 
+                <Link
+                  smooth={true}
+                  duration={ 1500 }
+                  offset={ -70 }
+                  to='newsletter'><button className='md:hidden text-sm font-medium 
               bg-blue-500 py-2.5 px-6 rounded-lg text-white cursor-pointer
                 hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-100 
                 w-full'> 
-              Get in touch </button></a>
+              Get in touch </button></Link>
             </div>
             </div>
 
@@ -105,7 +116,7 @@ const navbar = () => {
           </div>
         )
       }
-    </nav>
+    </motion.nav>
 
     
     </>
